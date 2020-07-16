@@ -1,38 +1,50 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 import NavLinks from "./NavLinks";
 import { useEffect } from "react";
+import "./MainNavigation.css";
 
 const MainNavigation = (props) => {
-  const [lang, setLang] = useState({
+  /* This is to change the navbar language in case the user refreshes the page */
+  const currentLanguage = useLocation().pathname.split("/")[1];
+
+  /* Atributes to set the navbar to the correct language */
+  const ptLangAtributes = {
     lang: "pt",
     nextLang: "en",
-    sobre: "sobre",
-    projetos: "projetos",
-  });
-
-  const changeLang = () => {
-    if (lang.lang === "pt") {
-      setLang({
-        lang: "en",
-        nextLang: "pt",
-        sobre: "about",
-        projetos: "projects",
-      });
-    }
-    if (lang.lang === "en") {
-      setLang({
-        lang: "pt",
-        nextLang: "en",
-        sobre: "sobre",
-        projetos: "projetos",
-      });
-    }
+    about: "sobre",
+    projects: "projetos",
   };
 
+  const enLangAtributes = {
+    lang: "en",
+    nextLang: "pt",
+    about: "about",
+    projects: "projects",
+  };
+
+  const initialState =
+    currentLanguage === "pt" ? ptLangAtributes : enLangAtributes;
+
+  const [lang, setLang] = useState(initialState);
+
+  /* This function is triggered when the user selects another language on the dropdown */
+  const changeLang = () => {
+    if (currentLanguage === "pt") {
+      setLang(enLangAtributes);
+    }
+    if (currentLanguage === "en") {
+      setLang(ptLangAtributes);
+    }
+
+    console.log("lingua: " + currentLanguage);
+    console.log("objeto: " + lang.lang);
+  };
+
+  /* Code to trigger sidenav and dropdown using Materialize */
   useEffect(() => {
     var elem = document.querySelector(".sidenav");
     M.Sidenav.init(elem, {
@@ -45,13 +57,16 @@ const MainNavigation = (props) => {
 
   return (
     <React.Fragment>
+      {/* Drop down content for changing the language */}
       <ui id="dropdown1" className="dropdown-content">
-        <li className="transparent">
+        <li>
           <Link to={`/${lang.nextLang}/`} onClick={changeLang}>
             {lang.nextLang.toUpperCase()}
           </Link>
         </li>
       </ui>
+
+      {/* Content for navbar */}
       <nav className="nav-bar transparent">
         <div className="container">
           <div class="nav-wrapper">
@@ -71,29 +86,16 @@ const MainNavigation = (props) => {
                 </a>
               </li>
 
-              <NavLinks links={lang} className="hide-on-med-and-down" />
+              <NavLinks links={lang} type="navbar" />
 
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/stephany-rodrigues/"
-                  target="_blank"
-                >
-                  <i className="fa fa-linkedin-square fa-2x "></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/stephany.rr" target="_blank">
-                  <i className="fa fa-github-square fa-2x"></i>
-                </a>
-              </li>
               <li>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                   <i class="material-icons">more_vert</i>
                 </a>
               </li>
             </ul>
-            <ul className="sidenav" id="mobile-demo">
-              <NavLinks links={lang} />
+            <ul className="sidenav center" id="mobile-demo">
+              <NavLinks links={lang} type="sidebar" />
             </ul>
           </div>
         </div>

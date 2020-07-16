@@ -12,8 +12,3 @@ The website does not contain a back-end currently.
 I used Materialize CSS libraries to add style to the component, so I would have more control on the style and at the same time be more productive developing the site. Since Materialize contains a lot of components ready to use and css defined and responsive.
 
 https://materializecss.com/
-
-# bugs
-
-have to make clicking anywhere close the language dropdown.
-have to adjust the size icons in navbar.

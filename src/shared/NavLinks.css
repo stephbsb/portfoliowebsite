@@ -1,0 +1,20 @@
+.navbar-menu,
+.navbar-divider {
+  display: none !important;
+}
+
+.sidebar-icon {
+  display: none !important;
+}
+
+.sidebar-icon a {
+  display: inline !important;
+  padding: 15px 15px !important;
+}
+
+@media (max-width: 450px) {
+  .sidebar-icon {
+    display: block !important;
+    padding-top: 20px !important;
+  }
+}
