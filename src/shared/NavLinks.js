@@ -24,9 +24,9 @@ const NavLinks = (props) => {
           </a>
         </div>
       </li>
-      <li className={`${props.type}-divider`}>
+      <div className={`${props.type}-divider`}>
         <div className="divider"></div>
-      </li>
+      </div>
       <li className={`${style}`}>
         <Link to={`/${lang}/`} className="sidenav-close">
           {about}
@@ -38,9 +38,9 @@ const NavLinks = (props) => {
         </Link>
       </li>
 
-      <li className={`${styleSideIcons}`}>
+      <div className={`${styleSideIcons}`}>
         <div className="divider"></div>
-      </li>
+      </div>
 
       {/* Icons for SideNav */}
       <li className={`${styleSideIcons} center`}>
