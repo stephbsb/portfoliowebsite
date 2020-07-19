@@ -1,0 +1,18 @@
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.redes-sociais li {
+  padding: 0px 10px;
+}
+
+.redes-sociais i {
+  color: white;
+}
+
+.redes-sociais i:hover {
+  color: var(--color-purple);
+}

@@ -9,7 +9,6 @@ const LandingPage = (props) => {
     <main>
       <BannerSection />
       <ProjectsSection />
-      <SkillsSection />
     </main>
   );
 };

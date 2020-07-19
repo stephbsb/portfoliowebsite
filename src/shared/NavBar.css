@@ -19,6 +19,11 @@
   background: white;
   height: 60px;
   --text-color: rgba(0, 0, 0, 0.8);
+  --text-color-logo: -webkit-linear-gradient(
+    139deg,
+    var(--color-purple) 0%,
+    var(--color-pink) 100%
+  );
 }
 
 .navbar-navigation {
@@ -77,6 +82,12 @@
   align-items: center;
   font-size: 2rem;
   font-family: "Source Code Pro", monospace;
+}
+
+.navbar-scroll .navbar-logo {
+  background: var(--text-color-logo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 600px) {
