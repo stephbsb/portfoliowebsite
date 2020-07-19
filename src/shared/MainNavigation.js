@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
 
 import NavLinks from "./NavLinks";
 import { useEffect } from "react";
@@ -45,15 +43,7 @@ const MainNavigation = (props) => {
   };
 
   /* Code to trigger sidenav and dropdown using Materialize */
-  useEffect(() => {
-    var elem = document.querySelector(".sidenav");
-    M.Sidenav.init(elem, {
-      edge: "right",
-    });
-
-    var dropdown = document.querySelector(".dropdown-trigger");
-    M.Dropdown.init(dropdown, { coverTrigger: false });
-  });
+  useEffect(() => {});
 
   return (
     <React.Fragment>
