@@ -1,37 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const NavLinks = (props) => {
-  let linkClass = "";
-
   return (
-    <ul>
+    <ul className="navlinks">
       <li>
-        <a
-          href="#home"
-          onClick={props.onClick}
-          id="home_link"
-          className={linkClass}
-        >
+        <a href="#home" onClick={props.onClick}>
           sobre
         </a>
       </li>
       <li>
-        <a
-          href="#projects"
-          onClick={props.onClick}
-          id="projects_link"
-          className={linkClass}
-        >
+        <a href="#projects" onClick={props.onClick}>
           projetos
         </a>
       </li>
       <li>
-        <a
-          href="#skills"
-          onClick={props.onClick}
-          id="skills_link"
-          className={linkClass}
-        >
+        <a href="#skills" onClick={props.onClick}>
           habilidades
         </a>
       </li>

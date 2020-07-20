@@ -8,7 +8,7 @@ import bannerImg from "../../../media/svg/bottom-banner.svg";
 
 const BannerSection = (props) => {
   return (
-    <section id="home" className="banner-section">
+    <section id={props.id} className="banner-section">
       <div className="background">
         <div className="container">
           <div className="banner-text">

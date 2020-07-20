@@ -54,6 +54,8 @@
   color: var(--text-color);
   text-decoration: none;
   height: 100%;
+
+  transition: backgroun-color 0.5s linear;
 }
 
 .navbar-navigation-items a:hover,

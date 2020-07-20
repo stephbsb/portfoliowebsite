@@ -5,7 +5,7 @@ import spinner from "../../../media/svg/cog-solid.svg";
 
 const ProjectsSection = (props) => {
   return (
-    <section id="projects">
+    <section id={props.id}>
       <div className="container">
         <div className="projects-content">
           <h1>Em construção</h1>

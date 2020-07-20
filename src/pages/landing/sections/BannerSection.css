@@ -7,7 +7,7 @@
 
 .banner-section .background {
   padding: 100px 0px;
-  width: 100%;
+  width: 99.9%;
   height: 99.9%;
   background-image: -webkit-linear-gradient(
     139deg,
@@ -23,6 +23,7 @@
   bottom: 0;
   width: 100%;
   height: auto;
+  object-fit: fill;
 }
 
 .banner-text {

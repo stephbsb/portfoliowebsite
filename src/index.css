@@ -19,11 +19,6 @@
   --grey-text: rgba(0, 0, 0, 0.8);
 }
 
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
 body {
   margin: 0;
   color: var(--grey-text);
