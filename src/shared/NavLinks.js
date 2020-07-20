@@ -3,17 +3,13 @@ import React from "react";
 const NavLinks = (props) => {
   let linkClass = "";
 
-  const setActiveLink = (event) => {
-    console.log(event.target.className);
-  };
-
   return (
     <ul>
       <li>
         <a
           href="#home"
-          onClick={(props.onClick, setActiveLink)}
-          id="home"
+          onClick={props.onClick}
+          id="home_link"
           className={linkClass}
         >
           sobre
@@ -22,8 +18,8 @@ const NavLinks = (props) => {
       <li>
         <a
           href="#projects"
-          onClick={(props.onClick, setActiveLink)}
-          id="projects"
+          onClick={props.onClick}
+          id="projects_link"
           className={linkClass}
         >
           projetos
@@ -32,8 +28,8 @@ const NavLinks = (props) => {
       <li>
         <a
           href="#skills"
-          onClick={(props.onClick, setActiveLink)}
-          id="skills"
+          onClick={props.onClick}
+          id="skills_link"
           className={linkClass}
         >
           habilidades

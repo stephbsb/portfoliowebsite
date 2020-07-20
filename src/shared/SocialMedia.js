@@ -29,7 +29,7 @@ const SocialMedia = () => {
         </a>
       </li>
       <li>
-        <a href="mailto:stephany0303@gmail.com" target="_blank">
+        <a href="mailto:rrodrigues.stephany@gmail.com" target="_blank">
           <i class="fa fa-envelope fa-2x"></i>
         </a>
       </li>
