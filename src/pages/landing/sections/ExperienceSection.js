@@ -1,10 +1,13 @@
 import React from "react";
 
-const SkillsSection = (props) => {
+import "./ExperienceSection.css";
+import SectionTitle from "../../../shared/Components/SectionTitle";
+
+const ExperienceSection = (props) => {
   return (
-    <section id="skills">
+    <section id={props.id} className={`${props.className} experience-section`}>
       <div className="container">
-        <h1>SKILLS</h1>
+        <SectionTitle title="Mais" />
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
           omnis sit commodi ab fugiat excepturi tempora perferendis, quas eius
@@ -35,4 +38,4 @@ const SkillsSection = (props) => {
   );
 };
 
-export default SkillsSection;
+export default ExperienceSection;

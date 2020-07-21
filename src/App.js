@@ -8,25 +8,22 @@ import {
 
 import "./App.css";
 import LandingPage from "./pages/landing/LandingPage";
-import NavBar from "./shared/NavBar";
-import SideDrawer from "./shared/SideDrawer";
-import Backdrop from "./shared/Backdrop/Backdrop";
+import NavBar from "./shared/Navigation/NavBar";
+import SideDrawer from "./shared/Navigation/SideDrawer";
+import Backdrop from "./shared/Components/Backdrop";
 
 function App() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
   const drawerToggleHandler = () => {
-    console.log("prev: " + sideDrawerOpen);
     setSideDrawerOpen(!sideDrawerOpen);
-    console.log("after: " + sideDrawerOpen);
   };
 
   return (
     <div className="App">
-      <SideDrawer toggleSideBar={drawerToggleHandler} show={sideDrawerOpen} />
-
       {sideDrawerOpen && <Backdrop toggleSideBar={drawerToggleHandler} />}
       <Router>
+        <SideDrawer toggleSideBar={drawerToggleHandler} show={sideDrawerOpen} />
         <NavBar toggleSideBar={drawerToggleHandler} />
         <Switch>
           <Route path="/" exact>

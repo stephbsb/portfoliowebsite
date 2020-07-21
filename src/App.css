@@ -1,4 +1,22 @@
 /* Global Style */
+.App {
+  width: 100%;
+}
+
+.center-and-align-items {
+  display: flex !important;
+
+  align-content: center;
+  justify-content: center;
+}
+
+.center-and-align-items.row {
+  flex-direction: row;
+}
+
+.center-and-align-items.column {
+  flex-direction: column;
+}
 
 .container {
   width: 90%;
@@ -7,10 +25,95 @@
   margin: auto;
 }
 
+section {
+  min-height: 90vh;
+}
+
 li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .space {
   flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 10px 0px;
+  transition: 0.5s;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+h6,
+p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  h6,
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }

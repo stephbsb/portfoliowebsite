@@ -2,13 +2,13 @@ import React from "react";
 
 import "./BannerSection.css";
 
-import SocialMedia from "../../../shared/SocialMedia";
+import SocialMedia from "../../../shared/Components/SocialMedia";
 
 import bannerImg from "../../../media/svg/bottom-banner.svg";
 
 const BannerSection = (props) => {
   return (
-    <section id={props.id} className="banner-section">
+    <section id={props.id} className={`banner-section ${props.className}`}>
       <div className="background">
         <div className="container">
           <div className="banner-text">
@@ -20,8 +20,8 @@ const BannerSection = (props) => {
             </h2>
             <h4>
               Sou formada em Engenharia de Controle e Automação pela
-              Universidade de Brasília e atuo como desenvolvedora de web apps,
-              em sua maioria em JAVA, porém me aventuro a aprender novas
+              Universidade de Brasília e atuo como desenvolvedora de aplicações
+              web, em sua maioria em JAVA, porém me aventuro a aprender novas
               tecnologias.
             </h4>
             <h3>Aqui eu mostro um pouco sobre os meus projetos.</h3>
