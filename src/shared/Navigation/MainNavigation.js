@@ -1,45 +1,45 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-import NavLinks from "./NavLinks";
-import { useEffect } from "react";
-import "./MainNavigation.css";
+import NavLinks from './NavLinks';
+import { useEffect } from 'react';
+import './MainNavigation.css';
 
 const MainNavigation = (props) => {
   /* This is to change the navbar language in case the user refreshes the page */
-  const currentLanguage = useLocation().pathname.split("/")[1];
+  const currentLanguage = useLocation().pathname.split('/')[1];
 
   /* Atributes to set the navbar to the correct language */
   const ptLangAtributes = {
-    lang: "pt",
-    nextLang: "en",
-    about: "sobre",
-    projects: "projetos",
+    lang: 'pt',
+    nextLang: 'en',
+    about: 'sobre',
+    projects: 'projetos',
   };
 
   const enLangAtributes = {
-    lang: "en",
-    nextLang: "pt",
-    about: "about",
-    projects: "projects",
+    lang: 'en',
+    nextLang: 'pt',
+    about: 'about',
+    projects: 'projects',
   };
 
   const initialState =
-    currentLanguage === "pt" ? ptLangAtributes : enLangAtributes;
+    currentLanguage === 'pt' ? ptLangAtributes : enLangAtributes;
 
   const [lang, setLang] = useState(initialState);
 
   /* This function is triggered when the user selects another language on the dropdown */
   const changeLang = () => {
-    if (currentLanguage === "pt") {
+    if (currentLanguage === 'pt') {
       setLang(enLangAtributes);
     }
-    if (currentLanguage === "en") {
+    if (currentLanguage === 'en') {
       setLang(ptLangAtributes);
     }
 
-    console.log("lingua: " + currentLanguage);
-    console.log("objeto: " + lang.lang);
+    console.log('lingua: ' + currentLanguage);
+    console.log('objeto: ' + lang.lang);
   };
 
   /* Code to trigger sidenav and dropdown using Materialize */
@@ -48,7 +48,7 @@ const MainNavigation = (props) => {
   return (
     <React.Fragment>
       {/* Drop down content for changing the language */}
-      <ui id="dropdown1" className="dropdown-content">
+      <ui id='dropdown1' className='dropdown-content'>
         <li>
           <Link to={`/${lang.nextLang}/`} onClick={changeLang}>
             {lang.nextLang.toUpperCase()}
@@ -57,35 +57,39 @@ const MainNavigation = (props) => {
       </ui>
 
       {/* Content for navbar */}
-      <nav className="nav-bar transparent">
-        <div className="container">
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo left">
+      <nav className='nav-bar transparent'>
+        <div className='container'>
+          <div className='nav-wrapper'>
+            <a href='#' className='brand-logo left'>
               Stephany
             </a>
 
-            <ul className="right">
+            <ul className='right'>
               <li>
                 <a
-                  className="dropdown-trigger"
-                  href="#"
-                  data-target="dropdown1"
+                  className='dropdown-trigger'
+                  href='#'
+                  data-target='dropdown1'
                 >
                   {lang.lang.toUpperCase()}
-                  <i className="material-icons right">keyboard_arrow_down</i>
+                  <i className='material-icons right'>keyboard_arrow_down</i>
                 </a>
               </li>
 
-              <NavLinks links={lang} type="navbar" />
+              <NavLinks links={lang} type='navbar' />
 
               <li>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                  <i class="material-icons">more_vert</i>
+                <a
+                  href='#'
+                  data-target='mobile-demo'
+                  className='sidenav-trigger'
+                >
+                  <i className='material-icons'>more_vert</i>
                 </a>
               </li>
             </ul>
-            <ul className="sidenav center" id="mobile-demo">
-              <NavLinks links={lang} type="sidebar" />
+            <ul className='sidenav center' id='mobile-demo'>
+              <NavLinks links={lang} type='sidebar' />
             </ul>
           </div>
         </div>

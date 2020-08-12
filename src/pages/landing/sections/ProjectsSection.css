@@ -31,16 +31,34 @@
   margin: 50px 0px;
 }
 
-.project-item .project-img,
-.project-item .project-text {
+#phisiocare-website .project-img,
+#phisiocare-website .project-text {
   align-items: stretch;
   vertical-align: middle;
   width: 50%;
 }
 
-.project-item .project-text {
+#phisiocare-website .project-text {
   padding-left: 20px;
+}
+
+.project-item .project-img,
+.project-item .project-text {
+  width: 100%;
+  padding-left: 0;
+}
+
+.project-item .project-text {
+  margin-top: 0;
+
   padding-top: 0px;
+}
+
+.project-item .project-text h2 {
+  margin-top: 0;
+  padding-top: 0px;
+
+  border-bottom: solid 2px #d6d6d6;
 }
 
 .project-item .project-img {
@@ -71,8 +89,13 @@
   }
 
   .project-item .project-img,
-  .project-item .project-text {
+  .project-item .project-text,
+  #phisiocare-website .project-img,
+  #phisiocare-website .project-text {
     width: 100%;
+  }
+  #phisiocare-website .project-text {
+    padding-left: 0px;
   }
 
   .project-item .project-text {
