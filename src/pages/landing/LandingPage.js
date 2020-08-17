@@ -13,7 +13,6 @@ const LandingPage = (props) => {
       <div className='landing-page'>
         <BannerSection id='home' className='pagesection' />
         <ProjectsSection id='projects' className='pagesection' />
-
         <Footer />
       </div>
     </main>

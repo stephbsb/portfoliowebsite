@@ -8,7 +8,7 @@ import video from '../../../media/video/Phisiocare.mp4';
 import SectionTitle from '../../../shared/Components/SectionTitle';
 const ProjectsSection = (props) => {
   return (
-    <section id={props.id} className={`${props.className}`}>
+    <section id={props.id} className={`projects-section ${props.className}`}>
       <div className='container'>
         <div className='projects-content'>
           <SectionTitle title='Projetos' />
@@ -26,7 +26,7 @@ const ProjectsSection = (props) => {
                 <h4>Tecnologias Utilizadas:</h4>
                 <ul className='technologies-list '>
                   <li>
-                    <p>Front-end: ReactJs</p>
+                    <p>Front-end: ReactJs + Gatsby</p>
                   </li>
                   <li>
                     <p>Back-end: NodeJS</p>
@@ -39,18 +39,18 @@ const ProjectsSection = (props) => {
                   </li>
                 </ul>
                 <p>
-                  Atualmente a página se encontra em construção e você
-                  acompanhar pelos links abaixo:
+                  Atualmente a parte do blog se encontra em desenvolvimento.
+                  Você pode acessar o site já publicado pelo link abaixo:
                 </p>
                 <ul className='links-list'>
                   <li>
-                    <a href='https://phisiocare.herokuapp.com/' target='_blank'>
+                    <a href='https://www.phisiocare.com.br/' target='_blank'>
                       <p>VISITE A PAGINA</p>
                     </a>
                   </li>
                   <li>
                     <a
-                      href='https://github.com/stephbsb/phisiocare#'
+                      href='https://github.com/stephbsb/phisiocare-gatsby'
                       target='_blank'
                     >
                       <p>CODIGO NO GITHUB</p>
@@ -96,13 +96,12 @@ const ProjectsSection = (props) => {
                   </li>
                 </ul>
                 <p>Video Demo:</p>
-                <video width='100%' controls autoPlay loop muted>
+                <video controls autoPlay loop muted>
                   <source src={video} type='video/mp4' />
                   Your browser does not support the video tag.
                 </video>
               </div>
             </li>
-
             <li className='project-item no-image'>
               <div className='project-text'>
                 <h2>Este site</h2>

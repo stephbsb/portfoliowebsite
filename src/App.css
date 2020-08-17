@@ -5,6 +5,7 @@
 
 .center-and-align-items {
   display: flex !important;
+  display: table-cell;
 
   align-content: center;
   justify-content: center;
